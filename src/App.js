@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import './App.css';
+import Login from './views/Login'
 
 function App() {
     // variables for authentication
@@ -36,11 +37,8 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1> Spotify React</h1>
                 {!token ?
-                    <a href={AUTH_URL}>
-                        Login to Spotify
-                    </a>
+                    <Login auth={AUTH_URL}/>
                     : <button onClick={logout}>Logout</button>}
             </header>
         </div>
