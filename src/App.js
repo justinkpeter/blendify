@@ -7,6 +7,7 @@ function App() {
     const REDIRECT_URI = "http://localhost:3000"
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
+    const AUTH_URL = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`
 
     // state variables
     const [token, setToken] = useState("")
@@ -36,14 +37,11 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <h1> Spotify React</h1>
-                { !token ?
-                        <a href={`${AUTH_ENDPOINT}
-                               ?client_id=${CLIENT_ID}
-                               &redirect_uri=${REDIRECT_URI}
-                               &response_type=${RESPONSE_TYPE}`}>
-                            Login to Spotify
-                        </a>
-                : <button onClick={logout}> Logout </button>}
+                {!token ?
+                    <a href={AUTH_URL}>
+                        Login to Spotify
+                    </a>
+                    : <button onClick={logout}>Logout</button>}
             </header>
         </div>
     );

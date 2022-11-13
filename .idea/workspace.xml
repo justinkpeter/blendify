@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c083515-03bd-48f9-9dd7-8a6bffa836e5" name="Changes" comment="" />
+    <list default="true" id="5c083515-03bd-48f9-9dd7-8a6bffa836e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668365207743</updated>
       <workItem from="1668365211247" duration="4334000" />
+      <workItem from="1668369706849" duration="693000" />
     </task>
     <task id="LOCAL-00001" summary="initalizing proj">
       <created>1668366009577</created>
@@ -84,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668369519408</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding other project file stuff">
+      <created>1668369815247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668369815247</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +117,7 @@
     <MESSAGE value="initalizing proj" />
     <MESSAGE value="initalizing proj with more stuff" />
     <MESSAGE value="Getting spotify user-auth set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting spotify user-auth set up" />
+    <MESSAGE value="adding other project file stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding other project file stuff" />
   </component>
 </project>
