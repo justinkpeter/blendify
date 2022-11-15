@@ -36,8 +36,8 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                {!token ?
+            <header>
+                {! token ?
                     <Login auth={AUTH_URL}/>
                     : <button onClick={logout}>Logout</button>}
             </header>
