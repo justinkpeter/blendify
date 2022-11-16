@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import './App.css';
 import Login from './views/Login'
+import Dashboard from './views/Dashboard'
 
 function App() {
     // variables for authentication
@@ -37,9 +38,7 @@ function App() {
     return (
         <div className="App">
             <header>
-                {! token ?
-                    <Login auth={AUTH_URL}/>
-                    : <button onClick={logout}>Logout</button>}
+                {!token ? <Login auth={AUTH_URL}/> : <Dashboard/>}
             </header>
         </div>
     );
