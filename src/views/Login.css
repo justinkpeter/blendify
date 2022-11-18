@@ -1,40 +1,40 @@
-div{
-    /*background-color: blue;*/
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-}
+/*div{*/
+/*    !*background-color: blue;*!*/
+/*    height: 100vh;*/
+/*    width: 100vw;*/
+/*    position: absolute;*/
+/*}*/
 
-body{
-    z-index: -100;
-}
+/*body{*/
+/*    z-index: -100;*/
+/*}*/
 
-h1{
-    color: white;
-    position: relative;
-    top: 280px;
-    right: 480px;
-    left: 200px;
-    font-size: 75px;
-    /*opacity: 0.80;*/
-    margin: auto !important;
-}
+/*h1{*/
+/*    color: white;*/
+/*    position: relative;*/
+/*    top: 280px;*/
+/*    right: 480px;*/
+/*    left: 200px;*/
+/*    font-size: 75px;*/
+/*    !*opacity: 0.80;*!*/
+/*    margin: auto !important;*/
+/*}*/
 
-button{
-    color: white;
-    background-color: black;
-    width: 150px;
-    height: 80px;
-    border-radius: 40px;
-    position: relative;
-    left: 200px;
-    top: 300px;
-    margin: auto;
-}
+/*button{*/
+/*    color: white;*/
+/*    background-color: black;*/
+/*    width: 150px;*/
+/*    height: 80px;*/
+/*    border-radius: 40px;*/
+/*    position: relative;*/
+/*    left: 200px;*/
+/*    top: 300px;*/
+/*    margin: auto;*/
+/*}*/
 
-button:hover{
-    background: #2d2c2c;
-    transition: 0.25s;
-    transform: scale(1.1);
-}
+/*button:hover{*/
+/*    background: #2d2c2c;*/
+/*    transition: 0.25s;*/
+/*    transform: scale(1.1);*/
+/*}*/
 

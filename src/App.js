@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import './App.css';
 import Login from './views/Login'
 import Dashboard from './views/Dashboard'
 
