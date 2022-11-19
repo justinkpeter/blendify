@@ -1,5 +1,11 @@
-import Header from './Header'
+import Navbar from './Navbar'
+import Sidebar from './Sidebar'
 
 export default function Dashboard(){
-    return (<Header />)
+    return (
+        <>
+            <Sidebar/>
+            {/*<Navbar title="blendify"/>*/}
+        </>
+        )
 }

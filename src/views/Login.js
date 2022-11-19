@@ -19,7 +19,6 @@ function Login(props){
                     gyroControls: false,
                     scale: 1.0,
                     scaleMobile: 1.0,
-                    color: "#b77575",
                     backgroundColor: 0x1b1a1a,
                     color: "#008949",
                     size: 1.50,
