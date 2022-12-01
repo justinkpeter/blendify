@@ -18,14 +18,16 @@ export default function Dashboard(props){
 
     return (
         <div>
-            <div className="grid grid-rows-4 grid-flow-col gap-4 h-screen">
-                <div className="row-span-1 col-span-4 h-auto bg-yellow-200">
+            <div className="grid grid-rows-6 grid-cols-8 grid-flow-rows gap-4 h-screen">
+                <div className="row-span-1 col-span-full h-auto bg-yellow-200">
                     Navbar
                     {/*<Navbar sendData={sendData} data={data}/>*/}
                 </div>
-                <div className="row-span-2 col-span-1 bg-purple-500 ">01</div>
-                <div className="col-span-4 bg-teal-800">02</div>
-                <div className="row-span-2 col-span-3 bg-rose-200">03</div>
+                <div className="row-span-4 col-span-1 bg-purple-500 ">sidebar</div>
+                <div className="row-span-4 col-span-5 bg-rose-200">content</div>
+                <div className="row-span-4 col-span-2 bg-rose-500">recently played</div>
+                <div className="row-span-1 col-span-full bg-rose-800"> hello </div>
+
             </div>
         </div>
     )
