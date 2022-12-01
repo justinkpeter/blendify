@@ -29,15 +29,12 @@ function App() {
         setToken(token)
     })
 
-    const logout = () => {
-        setToken("")
-        window.localStorage.removeItem("token")
-    }
+
 
     return (
         <div className="App">
             <header>
-                {!token ? <Login auth={AUTH_URL}/> : <Dashboard/>}
+                {!token ? <Login auth={AUTH_URL}/> : <Dashboard {...token} />}
             </header>
         </div>
     );
