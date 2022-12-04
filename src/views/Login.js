@@ -3,6 +3,8 @@ import './Login.css'
 import GLOBE from "vanta/dist/vanta.globe.min";
 import * as THREE from "three";
 
+import { loginUrl } from "../utils/spotify.js";
+
 function Login(props){
 
     const [vantaEffect, setVantaEffect] = useState(0);
@@ -32,7 +34,7 @@ function Login(props){
     }, [vantaEffect]);
 
     const goToSpotifyAuthPage = () =>{
-        window.location.href = props.auth
+        window.location.href = loginUrl
     }
     return (
             <div className="login__wrapper" ref={vantaRef}>
