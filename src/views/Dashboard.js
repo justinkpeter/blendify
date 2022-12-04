@@ -23,13 +23,9 @@ export default function Dashboard(props){
     return (
         <div>
             <Navbar />
+            
             <Sidebar />
-            {/*<div className="grid grid-rows-6 grid-cols-8 grid-flow-rows gap-4 h-screen">*/}
-            {/*    /!*<div className="row-span-4 col-span-1 bg-purple-500 "> <Sidebar/> </div>*!/*/}
-            {/*    <div className="row-span-4 col-span-5 bg-rose-200">content</div>*/}
-            {/*    <div className="row-span-4 col-span-2 bg-rose-500">recently played</div>*/}
-            {/*    <div className="row-span-1 col-span-full bg-rose-800"> hello </div>*/}
-            {/*</div>*/}
+            <Player/>
         </div>
     )
 }

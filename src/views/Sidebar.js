@@ -7,11 +7,12 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 
 const SidebarOption = ({option, Icon}) => {
     return (
-        <div className={"sidebarOption"}>
-            {/*{ Icon && <Icon className="sidebarOption__icon" />}*/}
-            {/*{ Icon ? (<h4> {option} </h4>): <p> {option} </p> }*/}
-            <li><a className="hover:font-bold"> {option} </a></li>
-        </div>
+        <li>
+            <a className={"text-sm hover:text-white bg-transparent"}>
+                { Icon && <Icon/> }
+                { Icon ? (<h4 className={"font-bold"}> {option} </h4>): <p className={"font-light text-sm"}> {option} </p> }
+            </a>
+        </li>
     );
 }
 export default function Sidebar(props){
@@ -20,27 +21,29 @@ export default function Sidebar(props){
     return(
             <div className="
                 drawer-side
-                h-screen
+                flex
                 w-1/6
                 ml-4
-                bg-zinc-500/5
-                shadow-lg
+                bg-white/5
                 text-base
                 rounded-2xl
                 backdrop-blur-sm"
             >
-                <label htmlFor="my-drawer" className="drawer-overlay"></label>
-                <ul className="md:text-base menu p-2 w-full text-xs overflow-auto">
+                <ul className="menu p-2 w-full h-1/2">
                     {/*!--Sidebar content here --*/}
+                    <SidebarOption option={"Home"} Icon={HomeIcon}/>
+                    <SidebarOption option={"Explore"} Icon={ExploreIcon}/>
+                    <SidebarOption option={"Insights"} Icon={TrendingUpIcon}/>
+                    <SidebarOption option={"Your Library"} Icon={LibraryBooksIcon}/>
+                    <div className="divider"></div>
 
-                    <li><a className="hover:font-bold"> <HomeIcon/> Home </a></li>
-                    <li><a className="hover:font-bold"> <ExploreIcon/> Discover </a></li>
-                    <li><a className="hover:font-bold"> <TrendingUpIcon/> Insights </a></li>
-                    <li><a className="hover:font-bold"> <LibraryBooksIcon/> Your Library </a></li>
+                    {/* playlists coming in from spotify*/}
+                    <div className={"h-1/2 overflow-scroll"}>
+                        {playlists?.items?.map(playlist => (
+                            <SidebarOption option={playlist.name}/>
+                        ))}
+                    </div>
 
-                    {playlists?.items?.map(playlist => (
-                        <SidebarOption option={playlist.name}/>
-                    ))}
                 </ul>
             </div>
     )
