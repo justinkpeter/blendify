@@ -16,34 +16,29 @@ const SidebarOption = ({option, Icon}) => {
     );
 }
 export default function Sidebar(props){
-    const [{ playlists }, dispatch] = useDataLayerValue()
 
+    const [{ playlists }, dispatch] = useDataLayerValue()
     return(
             <div className="
                 drawer-side
+                fixed
                 flex
-                w-1/6
                 ml-4
-                bg-white/5
-                text-base
-                rounded-2xl
-                backdrop-blur-sm"
+                bg-white/20 p-5 rounded-xl backdrop-blur-lg"
             >
-                <ul className="menu p-2 w-full h-1/2">
+                <ul className="menu flex p-1 h-full w-full ">
                     {/*!--Sidebar content here --*/}
                     <SidebarOption option={"Home"} Icon={HomeIcon}/>
                     <SidebarOption option={"Explore"} Icon={ExploreIcon}/>
                     <SidebarOption option={"Insights"} Icon={TrendingUpIcon}/>
                     <SidebarOption option={"Your Library"} Icon={LibraryBooksIcon}/>
                     <div className="divider"></div>
-
                     {/* playlists coming in from spotify*/}
-                    <div className={"h-1/2 overflow-scroll"}>
+                    <div className={"h-96 overflow-scroll"}>
                         {playlists?.items?.map(playlist => (
                             <SidebarOption option={playlist.name}/>
                         ))}
                     </div>
-
                 </ul>
             </div>
     )
