@@ -44,12 +44,17 @@ function App() {
                     discover_weekly: response,
                 })
             );
+
+            spotify.getMyRecentlyPlayedTracks().then((response) => {
+                dispatch({
+                    type: "SET_RECENTLY_PLAYED",
+                    recently_played: response?.items,
+                })
+            })
         }
 
     }, []);
-
-
-
+    
     return (
         <div className="App ">
             {token ? <Dashboard/> : <Login />}

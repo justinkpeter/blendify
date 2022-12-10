@@ -24,10 +24,7 @@ const Card = ({name, image}) =>{
 
 export default function Content(props) {
     const [{ user, playlists }] = useDataLayerValue();
-
     const topPlaylists = playlists?.items?.filter((playlist, index) => index < 6);
-    console.log(topPlaylists)
-    console.log('user is ', user)
 
     return (
         <>
