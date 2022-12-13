@@ -5,6 +5,7 @@ import Dashboard from './views/Dashboard'
 import { getTokenFromUrl } from "./utils/spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import { useDataLayerValue } from "./utils/DataLayer";
+import CustomCursor from "./components/CustomCursor";
 
 
 const spotify = new SpotifyWebApi()
@@ -57,6 +58,7 @@ function App() {
     
     return (
         <div className="App ">
+            <CustomCursor/>
             {token ? <Dashboard/> : <Login />}
         </div>
     );
