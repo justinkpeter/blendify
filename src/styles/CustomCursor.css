@@ -1,11 +1,25 @@
-.app-cursor{
+.main-cursor{
     z-index: 1000;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    border: 1px solid black;
+    background-color: ivory;
+    width: 10px;
+    height: 10px;
+    border: 1px black solid;
     pointer-events: none;
     overflow: hidden;
     transform: translate3d(0,0,0);
     position: fixed;
 }
+
+.secondary-cursor{
+    z-index: 1000;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 1px black solid;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    position: fixed;
+}
+
