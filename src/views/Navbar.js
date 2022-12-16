@@ -1,20 +1,25 @@
-import SearchIcon from '@mui/icons-material/Search';
-import SearchInput from "../components/SearchInput";
-import ProfileActions from "../components/ProfileActions";
+import React from 'react';
+import AboutButtonGroup from "../components/Navbar/AboutButtonGroup";
+import ProgressBar from "../components/Navbar/ProgressBar";
+import ProfileActions from "../components/Navbar/ProfileActions";
+
 
 export default function Navbar(props){
 
     return(
         <div className={"relative"}>
-            <div className="navbar pt-6 pr-6 pb-2 fixed top-3">
-                <div className="w-24">
-                    <a className="btn btn-ghost normal-case text-xl">blendify</a>
+            <div className={"flex flex-col"}>
+                <div className="navbar w-screen fixed" id={"navbar"}>
+                    <AboutButtonGroup/>
+                    <ProgressBar label={props.currentSection} sections={props.sections}/>
+                    <ProfileActions/>
                 </div>
-                <SearchInput/>
-                <div className="w-full justify-end">
-                    <ProfileActions />
+                <div className={"fixed w-screen top-12 left-[40rem]"}>
+                    {/*<ProgressBar/>*/}
                 </div>
             </div>
+
+
         </div>
 
     )
