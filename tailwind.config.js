@@ -5,11 +5,11 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         // Simple 26 column grid
-        '26': 'repeat(16, minmax(0, 1fr))',
+        '26': 'repeat(26, 10vh)',
       },
       gridTemplateRows: {
       // Simple 10 column grid
-      '10': 'repeat(10, minmax(0, 1fr))',
+      '10': 'repeat(10, 10vh)',
       },
       transitionProperty:{
         'transition-duration': '0.7s',
@@ -18,7 +18,7 @@ module.exports = {
         'transition-property': 'all'
       },
       width:{
-        'section': 'calc(100vw * 2.6)',
+        'section': 'calc(160vh)',
         'section-wrapper': 'calc(100vh * 2.6* 6)',
       },
     },

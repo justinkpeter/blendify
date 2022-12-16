@@ -11,11 +11,15 @@ export default function Dashboard(){
     function getSectionPercentage(){
         return ((window.scrollX / (document.body.scrollWidth - window.innerWidth)) * 100)
     }
+
+    const Cell= () =>{
+        // the grid cell
+    }
     const Section = (props) => {
         return(
-            <div>
+            <div >
                 <div className={"flex grid grid-cols-26 grid-rows-10 h-screen w-section"} id={props.name}>
-                    <div className={`col-span-full row-span-full ${props.color}`}> {props.name}</div>
+                    <div className={` ${props.color}`}> {props.name}</div>
                 </div>
             </div>
         )
