@@ -39,7 +39,7 @@ function Login(props){
     return (
             <div className={"h-screen w-screen "} ref={vantaRef}>
                 <div className={"relative flex"}>
-                  <div className={"absolute top-80 left-40 w-1/3 text-white"}>
+                  <div className={"absolute top-36 left-40 w-1/3 text-white"}>
                       <div className={"text-8xl font-bold"}>
                           <span> Discover how you </span>
                           <span className={"text-green-500"}> listen.</span>
