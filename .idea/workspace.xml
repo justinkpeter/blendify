@@ -4,16 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c083515-03bd-48f9-9dd7-8a6bffa836e5" name="Changes" comment="adding ionic icons">
-      <change afterPath="$PROJECT_DIR$/src/views/Player.js" afterDir="false" />
+    <list default="true" id="5c083515-03bd-48f9-9dd7-8a6bffa836e5" name="Changes" comment="establishing grids for cards">
+      <change afterPath="$PROJECT_DIR$/src/components/AudioButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AudioToggle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Mouse/MouseGlow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistCardBackdrop.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistCardImage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistCardTitle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistCardWrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistContentModal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopArtistUserSummary.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopArtistsArtistInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopArtistsWrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopTracks/TopTracks.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtists.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopGenres/TopGenres.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/spotify-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/spotify-white-logo-symbol-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/ArtistCard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/AudioButton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/AudioToggle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Mouse/MouseGlow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CustomCursor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mouse/CustomCursor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/ProgressBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/ProgressBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/CustomCursor.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CustomCursor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +49,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="com.haulmont.rcb.function_component" />
+        <option value="com.haulmont.rcb.arrow_function_component" />
       </list>
     </option>
   </component>
@@ -54,23 +82,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="vue.rearranger.settings.migration" value="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Mouse" />
+      <recent name="$PROJECT_DIR$/src/components/Navbar" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -101,6 +138,13 @@
       <workItem from="1668884725367" duration="6732000" />
       <workItem from="1669737837435" duration="17450000" />
       <workItem from="1669872860279" duration="4409000" />
+      <workItem from="1671066857818" duration="18511000" />
+      <workItem from="1671166802308" duration="26555000" />
+      <workItem from="1671593947456" duration="17619000" />
+      <workItem from="1671661691620" duration="109450000" />
+      <workItem from="1672342588569" duration="146000" />
+      <workItem from="1672417893525" duration="16947000" />
+      <workItem from="1672443504742" duration="34957000" />
     </task>
     <task id="LOCAL-00001" summary="initalizing proj">
       <created>1668366009577</created>
@@ -193,7 +237,70 @@
       <option name="project" value="LOCAL" />
       <updated>1669823706987</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="adding custom cursor">
+      <created>1670913983362</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670913983362</updated>
+    </task>
+    <task id="LOCAL-00015" summary="base styles for the custom cursor">
+      <created>1670959354497</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670959354497</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactoring navbar component and cleaning up code">
+      <created>1671204951037</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671204951037</updated>
+    </task>
+    <task id="LOCAL-00017" summary="no longer need this file">
+      <created>1671204980209</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671204980209</updated>
+    </task>
+    <task id="LOCAL-00018" summary="adjusting styling on login page ever so slightly">
+      <created>1671205003937</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1671205003937</updated>
+    </task>
+    <task id="LOCAL-00019" summary="removing base cursor styling to render custom cursor">
+      <created>1671205049427</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1671205049427</updated>
+    </task>
+    <task id="LOCAL-00020" summary="making dashboard sections a bit more dynamic in nature">
+      <created>1671205086864</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1671205086864</updated>
+    </task>
+    <task id="LOCAL-00021" summary="adding custom tailwind grid styling in tailwind confiq">
+      <created>1671205117240</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1671205117240</updated>
+    </task>
+    <task id="LOCAL-00022" summary="establishing grids for cards">
+      <created>1671211748105</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1671211748105</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +331,33 @@
     <MESSAGE value="finally getting tailwind and the header component to do what its supposed to do and style correctly" />
     <MESSAGE value="making some progress on overall UI display" />
     <MESSAGE value="adding ionic icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding ionic icons" />
+    <MESSAGE value="adding custom cursor" />
+    <MESSAGE value="base styles for the custom cursor" />
+    <MESSAGE value="Refactoring navbar component and cleaning up code" />
+    <MESSAGE value="no longer need this file" />
+    <MESSAGE value="adjusting styling on login page ever so slightly" />
+    <MESSAGE value="removing base cursor styling to render custom cursor" />
+    <MESSAGE value="making dashboard sections a bit more dynamic in nature" />
+    <MESSAGE value="adding custom tailwind grid styling in tailwind confiq" />
+    <MESSAGE value="establishing grids for cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="establishing grids for cards" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <line>55</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Statistics/TopGenres/TopGenres.jsx</url>
+          <line>89</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

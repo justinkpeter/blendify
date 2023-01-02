@@ -16,7 +16,7 @@
     border-radius: 50%;
     width: 80px;
     height: 80px;
-    border: 1px black solid;
+    border: 1px ivory solid;
     pointer-events: none;
     overflow: hidden;
     transform: translate3d(0,0,0);

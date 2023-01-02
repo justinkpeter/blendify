@@ -23,31 +23,80 @@
 /*}*/
 
 
-.background{
-    /* full height & width*/
-    height: 100vh;
-    width: 100vw;
+/*.background{*/
+/*    !* full height & width*!*/
+/*    height: 100vh;*/
+/*    width: 100vw;*/
 
-    /* gradient*/
-    background-color:hsla(0,100%,50%,1);
-    background-image:
-            radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
-            radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
-            radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
-            radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
-            radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
-            radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
-            radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+/*    !* gradient*!*/
+/*    background-color:hsla(0,100%,50%,1);*/
+/*    background-image:*/
+/*            radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),*/
+/*            radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),*/
+/*            radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),*/
+/*            radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),*/
+/*            radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),*/
+/*            radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),*/
+/*            radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);*/
 
-    /*blur effect*/
-    /* Add the blur effect */
-    filter: blur(10px);
-    -webkit-filter: blur(8px);
+/*    !*blur effect*!*/
+/*    !* Add the blur effect *!*/
+/*    filter: blur(10px);*/
+/*    -webkit-filter: blur(8px);*/
+/*}*/
+
+/*.background__wrapper{*/
+/*    background-color: white;*/
+/*    opacity: 30%;*/
+/*    height: 100vh;*/
+/*    width: 100vw;*/
+/*}*/
+
+.box {
+    --x-px: calc(var(--x) * 1px);
+    --y-px: calc(var(--y) * 1px);
+    --border: 2px;
+    background: rgba(255, 255, 255, 0.125);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.box:before, .box:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    border-radius: inherit;
+    background: radial-gradient(800px circle at var(--x-px) var(--y-px), white, transparent 15%);
+}
+.box:before {
+    z-index: 1;
+}
+.box:after {
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+}
+.box:hover:after {
+    opacity: 1;
 }
 
-.background__wrapper{
-    background-color: white;
-    opacity: 30%;
-    height: 100vh;
-    width: 100vw;
+.mouse-hover{
+    position: fixed;
+    top: -15vh;
+    left: -15vh;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    opacity: 1;
+    background: radial-gradient(circle,hsla(0,0%,100%,.5) 0,hsla(0,0%,100%,.1) 25%,hsla(0,0%,100%,0) 70%);
+    transition-property: opacity, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.64, 0.04, 0.35, 1);
+    transition-delay: 0s;
+    z-index: 5;
+    display: block
 }

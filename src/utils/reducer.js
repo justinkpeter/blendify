@@ -3,9 +3,19 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
-    recently_played: []
+    recently_played: [],
+    discover_weekly: null,
+    current_section: null,
+    top_artists: null,
+    top_artists_long: null,
+    top_tracks_short: null,
+    top_tracks_medium: null,
+    top_tracks_long: null,
+    top_genres: ['hello'],
+    top_genre: null,
+    top_tracks_genres:'',
     //TODO: remove after developing
-    //token: "BQAXMJ7XJB5BHLSCJGQtSzUvC8sWa8v7XV_NUsCiVq1fakZGw1VnUAbgg8S_HCPPcLAnpbcIyPjW7Nf0FICbUcHAQxBXjOK7WQ6ZkwlMJerdLI3XuxJ_MgZ4u3vvHZIw4AX1H2HOkdde5uK66-4vytsgR2MHxjch35VR9U2JuEdvu14oUmxtEHNIDElQXkbv"
+    token: null
 }
  const reducer = (state, action) => {
     //Action -> type, [payload]
@@ -36,10 +46,52 @@ export const initialState = {
                 ...state,
                 recently_played: action.recently_played
             }
-
+        case 'SET_CURRENT_SECTION':
+            return{
+                ...state,
+                current_section: action.current_section
+            }
+        case 'SET_TOP_ARTISTS':
+            return{
+                ...state,
+                top_artists: action.top_artists
+            }
+        case 'SET_TOP_ARTISTS_LONG':
+            return{
+                ...state,
+                top_artists_long: action.top_artists.items
+            }
+        case 'SET_TOP_ARTIST':
+            return{
+                ...state,
+                top_artist: action.top_artist
+            }
+        case 'SET_TOP_TRACKS_SHORT':
+            return{
+                ...state,
+                top_tracks_short: action.top_tracks
+            }
+        case 'SET_TOP_TRACKS_MEDIUM':
+            // console.log(action)
+            return{
+                ...state,
+                top_tracks_medium: action.top_tracks.items
+            }
+        case 'SET_TOP_TRACKS_LONG':
+            return{
+                ...state,
+                top_tracks_long: action.top_tracks
+            }
+        case 'SET_TOP_GENRES':
+            return{
+                ...state,
+                top_genres: action.top_genres
+            }
         default:
             return state
     }
 }
+
+
 
 export default reducer

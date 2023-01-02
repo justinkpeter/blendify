@@ -1,5 +1,5 @@
 import React, {useRef, useEffect } from 'react';
-import "../styles/CustomCursor.css";
+import "../../styles/CustomCursor.css";
 
 export const CustomCursor = () => {
 
@@ -29,7 +29,7 @@ export const CustomCursor = () => {
             const mouseY = clientY - mainCursor.current.clientHeight / 2;
             mainCursor.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
         });
-    }, []);
+    }, [positionRef, mainCursor]);
 
     useEffect(() => {
         const followMouse = () => {

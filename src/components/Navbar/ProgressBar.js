@@ -18,20 +18,20 @@ function ProgressBar(props) {
                 break
 
             case "Favorite Tracks":
-                scrollerClass = "translate3d(0px, -25%, 0px)"
-                break
-
-            case "Personality Profile":
                 scrollerClass = "translate3d(0px, -50%, 0px)"
                 break
 
-            case "Audio Analysis":
-                scrollerClass = "translate3d(0px, -75%, 0px)"
-                break
+            // case "Personality Profile":
+            //     scrollerClass = "translate3d(0px, -50%, 0px)"
+            //     break
+            //
+            // case "Audio Analysis":
+            //     scrollerClass = "translate3d(0px, -75%, 0px)"
+            //     break
 
-            default:
-                scrollerClass = "translate3d(0px, 0%, 0px)"
-                break
+            // default:
+            //     scrollerClass = "translate3d(0px, 0%, 0px)"
+            //     break
         }
         setScrollerStyle(scrollerClass)
     }
@@ -62,7 +62,7 @@ function ProgressBar(props) {
                 <div
                     id={"progress-bar"}
                     style={{width: `${scroll}%`}}
-                    className={"flex absolute left-0 w-full h-full bg-green-700 rounded-l-full rounded-r-full will-change-transform z-0"}
+                    className={"flex absolute left-0 w-full h-full bg-green-700 rounded-l-lg will-change-transform z-0"}
                 >
                 </div>
                 <div className={"flex flex-col transition absolute z-10 gap-2 font-bold text-lg p-1.5 text-white"}

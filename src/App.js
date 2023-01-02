@@ -5,10 +5,11 @@ import Dashboard from './views/Dashboard'
 import { getTokenFromUrl } from "./utils/spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import { useDataLayerValue } from "./utils/DataLayer";
-import CustomCursor from "./components/CustomCursor";
-
+import CustomCursor from "./components/Mouse/CustomCursor";
+import MouseGlow from "./components/Mouse/MouseGlow";
 
 const spotify = new SpotifyWebApi()
+
 
 function App() {
     const [{ user, token }, dispatch ] = useDataLayerValue();
@@ -24,7 +25,6 @@ function App() {
             })
 
             spotify.setAccessToken(_token)
-
             spotify.getMe().then(user => {
                 dispatch({
                     type: 'SET_USER',
@@ -32,26 +32,47 @@ function App() {
                 })
             })
 
-            spotify.getUserPlaylists().then((playlists) => {
+            // getting user most played tracks
+            spotify.getMyTopTracks({ time_range: "short_term", limit: 50}).then((response) => {
                 dispatch({
-                    type: 'SET_PLAYLISTS',
-                    playlists: playlists
+                    type: "SET_TOP_TRACKS_SHORT",
+                    top_tracks: response,
+                })
+            })
+            spotify.getMyTopTracks({ time_range: "medium_term"}).then((response) => {
+                dispatch({
+                    type: "SET_TOP_TRACKS_MEDIUM",
+                    top_tracks: response,
+                })
+            })
+            spotify.getMyTopTracks({ time_range: "long_term", limit: 50}).then((response) => {
+                dispatch({
+                    type: "SET_TOP_TRACKS_LONG",
+                    top_tracks: response.items,
                 })
             })
 
-            spotify.getPlaylist("37i9dQZEVXcP3DmpfdBbwF").then((response) =>
+            // getting user most played artists
+            spotify.getMyTopArtists({time_range: "short_term"}).then((response) => {
+                // console.log('here are top artists', response)
                 dispatch({
-                    type: "SET_DISCOVER_WEEKLY",
-                    discover_weekly: response,
-                })
-            );
-
-            spotify.getMyRecentlyPlayedTracks().then((response) => {
-                dispatch({
-                    type: "SET_RECENTLY_PLAYED",
-                    recently_played: response?.items,
+                    type: "SET_TOP_ARTISTS",
+                    top_artists: response,
                 })
             })
+            spotify.getMyTopArtists({time_range: "long_term", limit: 50}).then((response) => {
+                // console.log('here are top artists', response)
+                dispatch({
+                    type: "SET_TOP_ARTISTS_LONG",
+                    top_artists: response,
+                })
+            })
+
+            // waiting for requests to finish
+            setTimeout(() => {
+                // sometimes the token is not set in time, so we wait a bit
+            }, 2000)
+
         }
 
     }, []);
@@ -59,6 +80,7 @@ function App() {
     return (
         <div className="App ">
             <CustomCursor/>
+            <MouseGlow/>
             {token ? <Dashboard/> : <Login />}
         </div>
     );
