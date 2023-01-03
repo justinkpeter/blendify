@@ -36,19 +36,68 @@ function App() {
             spotify.getMyTopTracks({ time_range: "short_term", limit: 50}).then((response) => {
                 dispatch({
                     type: "SET_TOP_TRACKS_SHORT",
-                    top_tracks: response,
+                    top_tracks: response.items,
                 })
             })
             spotify.getMyTopTracks({ time_range: "medium_term"}).then((response) => {
                 dispatch({
                     type: "SET_TOP_TRACKS_MEDIUM",
-                    top_tracks: response,
+                    top_tracks: response.items,
                 })
             })
             spotify.getMyTopTracks({ time_range: "long_term", limit: 50}).then((response) => {
                 dispatch({
                     type: "SET_TOP_TRACKS_LONG",
                     top_tracks: response.items,
+                })
+            })
+
+            // getting top genres
+            spotify.getMyTopTracks({ time_range: "short_term", limit: 50}).then((response) => {
+                let artists = []
+                response.items.forEach(track => {
+                    artists.push(track.artists[0].id)
+                })
+
+                // fetching artist info to grab genres from each artist
+                let genres = []
+                let topGenres = []
+
+                spotify.getArtists(artists).then((response) => {
+                    //extracting genres from artists
+                    response.artists.forEach(artist => {
+                        genres.push(artist.genres)
+                    })
+
+                    // mapping genre frequency to object
+                    const genreFrequency = {}
+                    genres.forEach(genre => {
+                        genre.forEach(genre => {
+                            if(genreFrequency[genre]){
+                                genreFrequency[genre] += 1
+                            } else {
+                                genreFrequency[genre] = 1
+                            }
+                        })
+                    })
+
+                    // sort genres by frequency
+                    const sortedGenres = Object.keys(genreFrequency).sort(function(a,b){return genreFrequency[b]-genreFrequency[a]})
+
+                    // return topGenres
+                    topGenres =[
+                        {name: sortedGenres[0], percentage: genreFrequency[sortedGenres[0]]/ genres.length * 100},
+                        {name: sortedGenres[1], percentage: genreFrequency[sortedGenres[1]]/ genres.length * 100},
+                        {name: sortedGenres[2], percentage: genreFrequency[sortedGenres[2]]/ genres.length * 100},
+                        {name: sortedGenres[3], percentage: genreFrequency[sortedGenres[3]]/ genres.length * 100},
+                        {name: sortedGenres[4], percentage: genreFrequency[sortedGenres[4]]/ genres.length * 100},
+                    ]
+
+                    dispatch({
+                        type: "SET_TOP_GENRES",
+                        top_genres: topGenres,
+                    })
+
                 })
             })
 
@@ -76,7 +125,7 @@ function App() {
         }
 
     }, []);
-    
+
     return (
         <div className="App ">
             <CustomCursor/>

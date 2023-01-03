@@ -13,14 +13,14 @@ export const TopTracks = ({children}) => {
                 <div className={'absolute inset-0 z-20 leading-6'}>
                     <h1 className={'my-5 font-black text-7xl text-white'}>
                     <span className={'inline-block pr-[5vh]'}>
-                        <span className={'break-words text-green-400'}> {top_tracks?.items[0].artists[0].name}</span>
+                        <span className={'break-words text-green-400'}> {top_tracks[0]?.artists[0].name}</span>
                         <span> has been on repeat</span>
                         <br/>
                     </span>
                     </h1>
                     <p className={'font-light text-xl text-gray-100 pr-[10vh]'}>
                     <span className={'inline-block leading-loose'}>
-                        Yeah, you have other songs you like to bump, but {top_tracks?.items[0].name} by {top_tracks.items[0].artists[0].name} truly hit some chords with you.
+                        Yeah, you have other songs you like to bump, but {top_tracks[0]?.name} by {top_tracks[0].artists[0].name} truly hit some chords with you.
                     </span>
                     </p>
                 </div>
@@ -42,7 +42,7 @@ export const TopTracks = ({children}) => {
                     {/*album cover*/}
                     <div className={'relative h-[50vh]'}>
                         <div
-                            style={{backgroundImage: `url(${top_tracks?.items[0].album.images[0].url})`}}
+                            style={{backgroundImage: `url(${top_tracks[0].album.images[0].url})`}}
                             className={'absolute h-full w-full bg-cover bg-center'}>
                         </div>
                     </div>
@@ -53,12 +53,12 @@ export const TopTracks = ({children}) => {
                         </div>
                         <div className={'pl-4 overflow-hidden w-3/4 flex flex-col content-center space-y-1'}>
                             <h2 className={'font-bold truncate text-ellipsis lg:text-2xl 2xl:text-4xl whitespace-nowrap'}>
-                                {top_tracks?.items[0]?.name}
+                                {top_tracks[0]?.name}
                             </h2>
                             <h3 className={'text-gray-400'}>
-                                <span className={''}> {top_tracks?.items[0].artists[0].name}</span>
+                                <span className={''}> {top_tracks[0].artists[0].name}</span>
                                 <span>, </span>
-                                <span> {top_tracks?.items[0].artists[1].name}</span>
+                                <span> {top_tracks[0].artists[1].name}</span>
                             </h3>
                         </div>
 
@@ -84,7 +84,7 @@ export const TopTracks = ({children}) => {
                     {/*album cover*/}
                     <div className={'relative h-[30vh]'}>
                         <div
-                            style={{backgroundImage: `url(${top_tracks?.items[1].album.images[0].url})`}}
+                            style={{backgroundImage: `url(${top_tracks[1].album.images[0].url})`}}
                             className={'absolute h-full w-full bg-cover bg-center'}>
                         </div>
                     </div>
@@ -95,12 +95,12 @@ export const TopTracks = ({children}) => {
                         </div>
                         <div className={'pl-4 overflow-hidden w-3/4 flex flex-col content-center space-y-1'}>
                             <h2 className={'font-bold truncate text-ellipsis lg:text-2xl 2xl:text-4xl whitespace-nowrap'}>
-                                {top_tracks?.items[1]?.name}
+                                {top_tracks[1].name}
                             </h2>
                             <h3 className={'text-gray-400'}>
-                                <span className={''}> {top_tracks?.items[1].artists[0].name}</span>
+                                <span className={''}> {top_tracks[1].artists[0].name}</span>
                                 <span>, </span>
-                                <span> {top_tracks?.items[1].artists[1].name}</span>
+                                <span> {top_tracks[1].artists[1].name}</span>
                             </h3>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ export const TopTracks = ({children}) => {
                     {/*album cover*/}
                     <div className={'relative h-[30vh]'}>
                         <div
-                            style={{backgroundImage: `url(${top_tracks?.items[2].album.images[0].url})`}}
+                            style={{backgroundImage: `url(${top_tracks[2].album.images[0].url})`}}
                             className={'absolute h-full w-full bg-cover bg-center'}>
                         </div>
                     </div>
@@ -134,12 +134,12 @@ export const TopTracks = ({children}) => {
                         </div>
                         <div className={'pl-4 overflow-hidden w-3/4 flex flex-col content-center space-y-1'}>
                             <h2 className={'font-bold truncate text-ellipsis lg:text-2xl 2xl:text-4xl whitespace-nowrap'}>
-                                {top_tracks?.items[2]?.name}
+                                {top_tracks[2]?.name}
                             </h2>
                             <h3 className={'text-gray-400'}>
-                                <span className={''}> {top_tracks?.items[2].artists[0].name}</span>
+                                <span className={''}> {top_tracks[2].artists[0].name}</span>
                                 <span>, </span>
-                                <span> {top_tracks?.items[2].artists[1].name}</span>
+                                <span> {top_tracks[2].artists[1].name}</span>
                             </h3>
                         </div>
                     </div>
@@ -162,7 +162,7 @@ export const TopTracks = ({children}) => {
                     {/*album cover*/}
                     <div className={'relative h-[30vh]'}>
                         <div
-                            style={{backgroundImage: `url(${top_tracks?.items[3].album.images[0].url})`}}
+                            style={{backgroundImage: `url(${top_tracks[3].album.images[0].url})`}}
                             className={'absolute h-full w-full bg-cover bg-center'}>
                         </div>
                     </div>
@@ -173,14 +173,14 @@ export const TopTracks = ({children}) => {
                         </div>
                         <div className={'pl-4 overflow-hidden w-3/4 flex flex-col content-center space-y-1'}>
                             <h2 className={'font-bold truncate text-ellipsis lg:text-2xl 2xl:text-4xl whitespace-nowrap'}>
-                                {top_tracks?.items[3]?.name}
+                                {top_tracks[3]?.name}
                             </h2>
                             <h3 className={'text-gray-400'}>
-                                <span className={''}> {top_tracks?.items[3].artists[0].name}</span>
-                                { top_tracks?.items[3].length > 1 ?
+                                <span className={''}> {top_tracks[3].artists[0].name}</span>
+                                { top_tracks[3].length > 1 ?
                                     <div>
                                         <span>, </span>
-                                        <span> {top_tracks?.items[3].artists[1].name}</span>
+                                        <span> {top_tracks[3].artists[1].name}</span>
                                     </div>
                                     : ''
                                 }
@@ -206,7 +206,7 @@ export const TopTracks = ({children}) => {
                     {/*album cover*/}
                     <div className={'relative h-[30vh]'}>
                         <div
-                            style={{backgroundImage: `url(${top_tracks?.items[4].album.images[0].url})`}}
+                            style={{backgroundImage: `url(${top_tracks[4].album.images[0].url})`}}
                             className={'absolute h-full w-full bg-cover bg-center'}>
                         </div>
                     </div>
@@ -217,14 +217,14 @@ export const TopTracks = ({children}) => {
                         </div>
                         <div className={'pl-4 overflow-hidden w-3/4 flex flex-col content-center space-y-1'}>
                             <h2 className={'font-bold truncate text-ellipsis lg:text-2xl 2xl:text-4xl whitespace-nowrap'}>
-                                {top_tracks?.items[4]?.name}
+                                {top_tracks[4]?.name}
                             </h2>
                             <h3 className={'text-gray-400'}>
-                                <span className={''}> {top_tracks?.items[4].artists[0].name}</span>
-                                { top_tracks?.items[3].length > 1 ?
+                                <span className={''}> {top_tracks[4].artists[0].name}</span>
+                                { top_tracks[4].length > 1 ?
                                     <div>
                                         <span>, </span>
-                                        <span> {top_tracks?.items[4].artists[1].name}</span>
+                                        <span> {top_tracks[4].artists[1].name}</span>
                                     </div>
                                     : ''
                                 }

@@ -13,6 +13,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         // Simple 26 column grid
+        '19': 'repeat (19, 10vh)',
         '26': 'repeat(26, 10vh)',
         '33': 'repeat(33, 10vh)',
       },

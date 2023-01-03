@@ -4,40 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c083515-03bd-48f9-9dd7-8a6bffa836e5" name="Changes" comment="establishing grids for cards">
-      <change afterPath="$PROJECT_DIR$/src/components/AudioButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AudioToggle.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Mouse/MouseGlow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistCardBackdrop.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistCardImage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistCardTitle.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistCardWrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/ArtistCard/ArtistContentModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopArtistUserSummary.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopArtistsArtistInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopArtistsWrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopTracks/TopTracks.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtists.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopGenres/TopGenres.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/spotify-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/spotify-white-logo-symbol-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/ArtistCard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/AudioButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/AudioToggle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Mouse/MouseGlow.css" afterDir="false" />
+    <list default="true" id="5c083515-03bd-48f9-9dd7-8a6bffa836e5" name="Changes" comment="a very fat commit with tons of refactoring">
+      <change afterPath="$PROJECT_DIR$/src/components/Statistics/TopGenres/GenreBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CustomCursor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mouse/CustomCursor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/ProgressBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/ProgressBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/CustomCursor.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CustomCursor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopTracks/TopTracks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Statistics/TopArtist/TopTracks/TopTracks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Statistics/TopGenres/TopGenres.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Statistics/TopGenres/TopGenres.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +117,7 @@
       <workItem from="1671661691620" duration="109450000" />
       <workItem from="1672342588569" duration="146000" />
       <workItem from="1672417893525" duration="16947000" />
-      <workItem from="1672443504742" duration="34957000" />
+      <workItem from="1672443504742" duration="47079000" />
     </task>
     <task id="LOCAL-00001" summary="initalizing proj">
       <created>1668366009577</created>
@@ -300,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671211748105</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="a very fat commit with tons of refactoring">
+      <created>1672693251370</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1672693251370</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,22 +320,29 @@
     <MESSAGE value="making dashboard sections a bit more dynamic in nature" />
     <MESSAGE value="adding custom tailwind grid styling in tailwind confiq" />
     <MESSAGE value="establishing grids for cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="establishing grids for cards" />
+    <MESSAGE value="a very fat commit with tons of refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="a very fat commit with tons of refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>55</line>
+          <line>104</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Statistics/TopGenres/TopGenres.jsx</url>
-          <line>89</line>
+          <line>55</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <line>35</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
