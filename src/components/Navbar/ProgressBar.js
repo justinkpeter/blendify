@@ -18,7 +18,7 @@ function ProgressBar(props) {
                 break
 
             case "Favorite Tracks":
-                scrollerClass = "translate3d(0px, -50%, 0px)"
+                scrollerClass = "translate3d(0px, -45%, 0px)"
                 break
 
             // case "Personality Profile":
@@ -58,18 +58,18 @@ function ProgressBar(props) {
 
     return (
         <div className="navbar-center justify-start rounded-full h-10 w-64">
-            <div className={"flex relative bg-green-500 rounded-full h-full w-full object-contain place-content-center z-0 overflow-hidden"}>
+            <div className={"flex relative bg-green-500 rounded-full h-full w-48 object-contain place-content-center z-0 overflow-hidden"}>
                 <div
                     id={"progress-bar"}
                     style={{width: `${scroll}%`}}
                     className={"flex absolute left-0 w-full h-full bg-green-700 rounded-l-lg will-change-transform z-0"}
                 >
                 </div>
-                <div className={"flex flex-col transition absolute z-10 gap-2 font-bold text-lg p-1.5 text-white"}
+                <div className={"flex flex-col transition absolute z-10 gap-y-3 font-bold text-sm p-2 text-white"}
                      style={{transform: `${scrollerStyle}`}}>
                     {props.sections.map((section) => {
                         return(
-                            <span key={section.name}> {section.name }</span>
+                            <span key={section.name}> {section.name } </span>
                         )
                     })}
                 </div>

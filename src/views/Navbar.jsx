@@ -7,7 +7,7 @@ import ProfileActions from "../components/Navbar/ProfileActions";
 export default function Navbar(props){
 
     return(
-        <div className={"relative"}>
+        <div className={"relative z-50"}>
             <div className={"flex flex-col"}>
                 <div className="navbar w-screen fixed" id={"navbar"}>
                     <AboutButtonGroup/>

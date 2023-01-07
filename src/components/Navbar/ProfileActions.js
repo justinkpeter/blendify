@@ -24,7 +24,7 @@ const ProfileAvatar = (props) => {
 
 export default function ProfileActions() {
     return (
-        <div className="flex navbar-end justify-end">
+        <div className="flex navbar-end pr-10 text-white">
             <ProfileAvatar name={"Bethany Davis"}/>
             <MoreVertIconButton/>
         </div>
