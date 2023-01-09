@@ -10,11 +10,9 @@ import {ArtistTile} from "./ArtistTile/ArtistTile";
 
 export function TopArtists(props) {
     const [{top_artists, current_top_artist}, dispatch] = useDataLayerValue();
-    console.log('current_top_artist', current_top_artist)
     const topArtist = top_artists.items[0].name;
     const topArtistData = top_artists.items[0];
 
-    console.log(topArtistData)
     return (
         <div className={'bg-zinc-900'}>
             <TopArtistsWrapper>
@@ -25,6 +23,8 @@ export function TopArtists(props) {
                     colSpan={4}
                     rowStart={3}
                     rowSpan={4}
+                    height={`h-[50vh]`}
+                    width={`w-[40vh]`}
                     img={topArtistData.images[0].url}
                     title={topArtistData.name}
                     popularity={topArtistData.popularity}
@@ -32,6 +32,18 @@ export function TopArtists(props) {
                     topTrack={current_top_artist?.track}
                 />
                 {/*<ArtistCard artistData={topArtistData}/>*/}
+
+                <ArtistTile
+                    colStart={15}
+                    colSpan={3}
+                    rowStart={4}
+                    rowSpan={3}
+                    img={topArtistData.images[1].url}
+                    title={topArtistData.name}
+                    popularity={topArtistData.popularity}
+                    followers={topArtistData.followers.total}
+                    topTrack={current_top_artist?.track}
+                />
 
                 <div className={"grid grid-cols-3 col-[15_/_span_3] row-[4_/_span_3] relative z-10 text-white"}>
                     <div className={'absolute inset-0 rounded-lg z-20 flex justify-between items-end p-6 overflow-hidden'}>
