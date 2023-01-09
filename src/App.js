@@ -86,11 +86,11 @@ function App() {
 
                     // return topGenres
                     topGenres =[
-                        {name: sortedGenres[0], percentage: genreFrequency[sortedGenres[0]]/ genres.length * 100},
-                        {name: sortedGenres[1], percentage: genreFrequency[sortedGenres[1]]/ genres.length * 100},
-                        {name: sortedGenres[2], percentage: genreFrequency[sortedGenres[2]]/ genres.length * 100},
-                        {name: sortedGenres[3], percentage: genreFrequency[sortedGenres[3]]/ genres.length * 100},
-                        {name: sortedGenres[4], percentage: genreFrequency[sortedGenres[4]]/ genres.length * 100},
+                        {name: sortedGenres[0], percentage: Math.round(genreFrequency[sortedGenres[0]]/ genres.length * 100)},
+                        {name: sortedGenres[1], percentage: Math.round(genreFrequency[sortedGenres[1]]/ genres.length * 100)},
+                        {name: sortedGenres[2], percentage: Math.round(genreFrequency[sortedGenres[2]]/ genres.length * 100)},
+                        {name: sortedGenres[3], percentage: Math.round(genreFrequency[sortedGenres[3]]/ genres.length * 100)},
+                        {name: sortedGenres[4], percentage: Math.round(genreFrequency[sortedGenres[4]]/ genres.length * 100)},
                     ]
 
                     dispatch({
@@ -102,12 +102,25 @@ function App() {
             })
 
             // getting user most played artists
-            spotify.getMyTopArtists({time_range: "short_term"}).then((response) => {
+            spotify.getMyTopArtists({time_range: "short_term"}).then((topArtistResponse) => {
                 // console.log('here are top artists', response)
                 dispatch({
                     type: "SET_TOP_ARTISTS",
-                    top_artists: response,
+                    top_artists: topArtistResponse,
                 })
+
+                spotify.getArtistTopTracks(topArtistResponse.items[0].id, 'US').then((response) => {
+                    console.log ('artist top tracks', response)
+                    dispatch({
+                        type: "SET_CURRENT_TOP_ARTIST",
+                        top_artist: {
+                            artist: topArtistResponse.items[0].name,
+                            track: response.tracks[0],
+                        }
+                    })
+
+                })
+
             })
             spotify.getMyTopArtists({time_range: "long_term", limit: 50}).then((response) => {
                 // console.log('here are top artists', response)
@@ -120,14 +133,14 @@ function App() {
             // waiting for requests to finish
             setTimeout(() => {
                 // sometimes the token is not set in time, so we wait a bit
-            }, 2000)
+            }, 3000)
 
         }
 
     }, []);
 
     return (
-        <div className="App ">
+        <div className="App">
             <CustomCursor/>
             <MouseGlow/>
             {token ? <Dashboard/> : <Login />}

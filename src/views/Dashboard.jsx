@@ -5,6 +5,7 @@ import { useDataLayerValue } from "../utils/DataLayer";
 import {TopArtists} from "../components/Statistics/TopArtists";
 import {TopTracks} from "../components/Statistics/TopArtist/TopTracks/TopTracks.jsx";
 import {TopGenres} from "../components/Statistics/TopGenres/TopGenres.jsx";
+import {StreamingAnalysis} from "../components/Statistics/StreamingAnalysis/StreamingAnalysis";
 
 export default function Dashboard(){
 
@@ -37,13 +38,14 @@ export default function Dashboard(){
 
 
     return(
-        <div className={"flex flex-col h-screen w-screen bg-black"}>
+        <div className={"flex flex-col h-screen w-screen"}>
             <div>
                 <Navbar sections={sections} currentSection={currentCard}/>
-                <div className={"flex overflow-x-scroll w-fit bg-gray-600"}>
+                <div className={"flex overflow-x-scroll w-fit bg-zinc-900"}>
                     {top_artists ? <TopArtists/> : ""}
                     {top_tracks_short ? <TopTracks/> : ""}
                     {top_artists_long ? <TopGenres/> : ""}
+                    {/*{ <StreamingAnalysis/> }*/}
                     {/*top*/}
                     {/*{sections.map((section) => {*/}
                     {/*    return(*/}

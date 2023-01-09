@@ -14,6 +14,7 @@ export const initialState = {
     top_tracks_medium: null,
     top_tracks_long: null,
     top_genres: ['hello'],
+    current_top_artist: null,
     //TODO: remove after developing
     token: null
 }
@@ -114,6 +115,11 @@ const reducer = (state, action) =>{
             return{
                 ...state,
                 top_artist: action.top_artist
+            }
+        case 'SET_CURRENT_TOP_ARTIST':
+            return{
+                ...state,
+                current_top_artist: action.top_artist
             }
         case 'SET_TOP_TRACKS_SHORT':
             // console.log(getTopGenres(action.top_tracks))

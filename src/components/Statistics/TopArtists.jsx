@@ -2,20 +2,36 @@ import {useDataLayerValue} from "../../utils/DataLayer";
 import React from "react";
 import {ArtistCard} from "./TopArtist/ArtistCard";
 import {TopArtistsWrapper} from "./TopArtist/TopArtistsWrapper";
-import {TopArtistUserSummary} from "./TopArtist/TopArtistUserSummary";
+import {TopArtistUserSummary} from "./SectionUserSummary/SectionUserSummary";
 
 import '../../styles/ArtistCard.css';
+import {SectionUserSummary} from "./SectionUserSummary/SectionUserSummary";
+import {ArtistTile} from "./ArtistTile/ArtistTile";
 
 export function TopArtists(props) {
-    const [{top_artists}, dispatch] = useDataLayerValue();
+    const [{top_artists, current_top_artist}, dispatch] = useDataLayerValue();
+    console.log('current_top_artist', current_top_artist)
     const topArtist = top_artists.items[0].name;
     const topArtistData = top_artists.items[0];
+
+    console.log(topArtistData)
     return (
-        <div>
+        <div className={'bg-zinc-900'}>
             <TopArtistsWrapper>
                 {/* icon ? */}
-                <TopArtistUserSummary topArtist={topArtist}/>
-                <ArtistCard artistData={topArtistData}/>
+                <SectionUserSummary section={"Favorite Artists"} topArtist={topArtist}/>
+                <ArtistTile
+                    colStart={10}
+                    colSpan={4}
+                    rowStart={3}
+                    rowSpan={4}
+                    img={topArtistData.images[0].url}
+                    title={topArtistData.name}
+                    popularity={topArtistData.popularity}
+                    followers={topArtistData.followers.total}
+                    topTrack={current_top_artist?.track}
+                />
+                {/*<ArtistCard artistData={topArtistData}/>*/}
 
                 <div className={"grid grid-cols-3 col-[15_/_span_3] row-[4_/_span_3] relative z-10 text-white"}>
                     <div className={'absolute inset-0 rounded-lg z-20 flex justify-between items-end p-6 overflow-hidden'}>
@@ -24,11 +40,10 @@ export function TopArtists(props) {
                             className={"absolute top-0 left-0 object-cover object-center"}
                         />}
                         <div className={"text-2xl z-10"}>
-                            <h3 className={'text-lg '}> #2 </h3>
+                            <h3 className={'text-lg'}> #2 </h3>
                             <h2 className={'block font-bold'}>
                                 <span className={'flex flex-col'}>
                                     <span className={'inline-block'}> { top_artists.items[1].name}</span>
-
                                 </span>
                             </h2>
                         </div>

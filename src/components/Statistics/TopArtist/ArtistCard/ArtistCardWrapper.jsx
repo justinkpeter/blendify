@@ -11,7 +11,7 @@ export const ArtistCardWrapper = ({data,children}) => {
     return(
         <div
             onMouseDownCapture={(e) => {handleModalEvent(e)}}
-            className={'top-artists-cover col-start-10 col-4 row-start-3 row-span-4'}>
+            className={'top-artists-cover col-start-10 col-span-4 row-start-3 row-span-4'}>
             {/*<ArtistContentModal data={data}/>*/}
             {children}
         </div>
